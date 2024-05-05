@@ -1,0 +1,17 @@
+<div class="content-wrapper">
+    <div class="content-wrapper__header">
+        <div class="content-wrapper__header-content">
+            <div class="content-wrapper__header-content__left" *ngIf="{logo: mainLogo$ | async} as logoData">
+                <img [src]="this.imageService.getImage(logoData.logo!, 'png')" class="content-wrapper__header-content__left__image">
+            </div>
+            <div class="content-wrapper__header-content__right">
+                <div class="content-wrapper__header-content__right__text">
+                    Start your studying with our system
+                </div>
+                <button class="content-wrapper__header-content__right__button" routerLink="../firstSteps">
+                    START
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

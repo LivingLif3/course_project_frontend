@@ -1,0 +1,45 @@
+.content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 2rem 0 2rem;
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: #fff;
+        font-size: 1.875rem;
+
+        .link {
+            margin-right: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+
+        .input {
+            border: none;
+            background: inherit;
+
+            border-bottom: 3px solid white;
+
+            color: #fff;
+        }
+
+        .loop {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 10px;
+
+            cursor: pointer;
+        }
+    }
+}

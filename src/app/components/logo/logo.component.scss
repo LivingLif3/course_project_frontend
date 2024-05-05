@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    .image {
+        width: 4.1rem;
+        height: 4.1rem;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 3.5rem;
+        color: #fff;
+        margin-right: 10px;
+    }
+}
