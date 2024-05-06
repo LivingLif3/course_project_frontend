@@ -1,3 +1,4 @@
+import { ApiService } from './core/services/api.service';
 import { ImageService } from './core/services/image.service';
 import { Component, OnInit } from '@angular/core';
 import { ThemeSwitcherService } from './core/services/theme-switcher.service';
@@ -11,11 +12,15 @@ export class AppComponent implements OnInit {
   title = 'interface';
   constructor(
     private themeSwitcherService: ThemeSwitcherService,
-    private imageService: ImageService
+    private imageService: ImageService,
+    private apiService: ApiService
   ) {}
 
   ngOnInit(): void {
     this.themeSwitcherService.setLightTheme();
+    this.apiService.getAllArts().subscribe((arts) => {
+      console.log(arts);
+    });
   }
 
   public toogleTheme() {

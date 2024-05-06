@@ -1,0 +1,54 @@
+.row-info {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: 10rem;
+
+    &__text {
+        display: flex;
+        flex: 1;
+
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        img {
+            position: absolute;
+        }
+
+        .left {
+            left: 150px;
+            top: 130px;
+
+            transform: scale(0.7);
+        }
+
+        .right {
+            right: 150px;
+            top: 130px;
+
+            transform: scale(0.7);
+        }
+    }
+
+    &__photo {
+        display: flex;
+        flex: 1;
+        background-color: #D9D9D9;
+        position: relative;
+
+        min-height: 354px;
+        img {
+            position: absolute;
+            transform: scale(0.7);
+            top: -60%;
+        }
+
+    }
+}
+
+.invert {
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,102 @@
+.first-steps-wrapper {
+    width: 100%;
+    &__header-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 7rem 0 7rem 0;
+
+        &__header {
+            font-weight: 700;
+            font-size: 4rem;
+            color: rgb(var(--os-font-color));
+        }
+    }
+
+    &__content-wrapper {
+        padding: 0 10rem 0 10rem;
+
+        .row-info {
+            width: 100%;
+        
+            display: flex;
+        
+            margin-top: 10rem;
+        
+            &__text {
+                display: flex;
+                flex: 1;
+                color: rgb(var(--os-font-color));
+        
+                justify-content: center;
+                align-items: center;
+        
+                position: relative;
+
+                .fill {
+                    fill: rgb(var(--os-font-color))
+                }
+        
+                img {
+                    position: absolute;
+                }
+        
+                .left {
+                    left: 150px;
+                    top: 130px;
+        
+                    transform: scale(0.7);
+                }
+        
+                .right {
+                    right: 160px;
+                    top: 130px;
+        
+                    transform: scale(0.7);
+                }
+            }
+        
+            &__photo {
+                display: flex;
+                flex: 1;
+                background-color: #D9D9D9;
+                position: relative;
+        
+                min-height: 354px;
+                img {
+                    position: absolute;
+                    transform: scale(0.7);
+                }
+
+                .fox {
+                    top: -60%;
+                    right: 10%;
+                }
+
+                .dinner {
+                    top: -78%;
+                    left: -15%;
+                }
+
+                .god {
+                    top: -100%
+                }
+
+                .adam {
+                    top: -110%;
+                    left: -20%;
+                }
+
+                .angels {
+                    top: -45%;
+                }
+        
+            }
+        }
+        
+        .invert {
+            flex-direction: row-reverse;
+        }
+    }
+}

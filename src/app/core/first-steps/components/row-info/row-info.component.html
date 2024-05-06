@@ -1,0 +1,13 @@
+<div class="row-info" [class.invert]="invert">
+    <div class="row-info__text">
+        {{info}}
+        <img [src]="arrow" [class.left]="!invert" [class.right]="invert">
+    </div>
+    <div class="row-info__photo">
+        <img [src]="additionalImage" 
+            [class.center]="!left && !right"
+            [class.left]="left"
+            [class.right]="right"
+         />
+    </div>
+</div>

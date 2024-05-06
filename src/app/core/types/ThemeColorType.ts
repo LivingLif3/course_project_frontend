@@ -4,3 +4,7 @@ export interface IThemeRgbColor {
   g: number;
   b: number;
 }
+
+export interface ITheme extends IThemeRgbColor {
+  theme: string;
+}

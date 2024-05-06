@@ -14,6 +14,7 @@
     }
 
     body {
+        transition: 1000ms;
         background-color: rgb(var(--os-background-color));
     }
 }

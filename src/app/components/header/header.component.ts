@@ -8,10 +8,7 @@ import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  constructor(
-    private el: ElementRef,
-    private themeSwitcherService: ThemeSwitcherService
-  ) {}
+  constructor(private themeSwitcherService: ThemeSwitcherService) {}
 
   get fromGradient() {
     return this.themeSwitcherService.currentThemeData['fromGradient'];

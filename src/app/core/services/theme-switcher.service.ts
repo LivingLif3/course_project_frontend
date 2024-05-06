@@ -10,6 +10,11 @@ export class ThemeSwitcherService {
   currentTheme: 'dark' | 'light' = 'light';
 
   lightTheme: Record<string, IThemeRgbColor> = {
+    font: {
+      r: 0,
+      g: 0,
+      b: 0,
+    },
     primary: {
       r: 230,
       g: 118,
@@ -38,6 +43,11 @@ export class ThemeSwitcherService {
   };
 
   darkTheme: Record<string, IThemeRgbColor> = {
+    font: {
+      r: 255,
+      g: 255,
+      b: 255,
+    },
     primary: {
       r: 81,
       g: 101,
@@ -69,6 +79,8 @@ export class ThemeSwitcherService {
     logo: 'logo',
     mainLogo: 'mainLogo',
   };
+
+  themeSubject$: BehaviorSubject<string> = new BehaviorSubject('light');
 
   currentThemeSubject$: BehaviorSubject<Record<string, IThemeRgbColor>> =
     new BehaviorSubject(this.lightTheme);
@@ -122,6 +134,7 @@ export class ThemeSwitcherService {
 
   setLightTheme() {
     this.currentTheme = 'light';
+    this.themeSubject$.next('light');
     this.currentThemeSubject$.next(this.lightTheme);
     this.images['logo'] = 'logo';
     this.images['mainLogo'] = 'mainLogo';
@@ -133,6 +146,7 @@ export class ThemeSwitcherService {
 
   setDarkTheme() {
     this.currentTheme = 'dark';
+    this.themeSubject$.next('dark');
     this.currentThemeSubject$.next(this.darkTheme);
     this.images['logo'] = 'logoDark';
     this.images['mainLogo'] = 'mainLogoDark';
@@ -164,5 +178,9 @@ export class ThemeSwitcherService {
 
   get mainLogo$() {
     return this.mainLogoSubject$.asObservable();
+  }
+
+  get theme$() {
+    return this.themeSubject$.asObservable();
   }
 }
