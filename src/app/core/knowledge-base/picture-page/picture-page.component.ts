@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Picture} from "../../types/Picture";
 import {ImageService} from "../../services/image.service";
+import {ArrowButtonComponent} from "../../components/arrow-button/arrow-button.component";
 
 @Component({
   selector: 'app-picture-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ArrowButtonComponent, RouterLink],
   templateUrl: './picture-page.component.html',
   styleUrls: ['./picture-page.component.scss']
 })

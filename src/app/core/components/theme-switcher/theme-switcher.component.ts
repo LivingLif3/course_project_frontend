@@ -1,4 +1,4 @@
-import { ThemeSwitcherService } from './../../services/theme-switcher.service';
+import { ThemeSwitcherService } from '../../services/theme-switcher.service';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

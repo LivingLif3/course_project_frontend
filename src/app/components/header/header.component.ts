@@ -1,4 +1,4 @@
-import { ThemeSwitcherService } from './../../core/services/theme-switcher.service';
+import { ThemeSwitcherService } from '../../core/services/theme-switcher.service';
 import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 
 @Component({

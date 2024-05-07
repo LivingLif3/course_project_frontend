@@ -1,88 +1,212 @@
 .content-wrapper {
-    padding: 10em;
-    color: #3C220F /*rgb(var(--os-font-color))*/;
-  
+    padding-top: 10em;
+    color: rgb(var(--os-font-color));
+
     &__header-content {
       text-align: center;
-  
+
       &__title {
         font-weight: bold;
         font-size: 6rem;
+
+        @media (max-width: 1200px) {
+          font-size: 5rem;
+        }
+
+        @media (max-width: 992px) {
+          font-size: 4rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 3rem;
+        }
+
+        @media (max-width: 400px) {
+          font-size: 2rem;
+        }
       }
-  
+
       &__text {
         max-width: 110vh;
         margin: auto;
         padding-top: 3em;
         font-size: 2.25rem;
+
+        @media (max-width: 1200px) {
+          font-size: 2rem;
+        }
+
+        @media (max-width: 992px) {
+          font-size: 1.75rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 400px) {
+          font-size: 1.25rem;
+        }
       }
     }
-  
+
     &__main-content{
+      margin-left: 10em;
+      margin-right: 10em;
       padding-top: 12em;
-  
+
+      @media (max-width: 1200px) {
+        margin-left: 6rem;
+        margin-right: 6rem;
+      }
+
+      @media (max-width: 992px) {
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+
+      @media (max-width: 400px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
       &__title {
         display: flex;
-  
+
         &__name {
           text-align: center;
           width: 100%;
-  
+
           font-weight: bold;
           font-size: 4rem;
         }
-  
+
         &__horizontal-line {
           align-self: center;
           width: 100%;
-          height: 0.2vh;
-          background-color: #3C220F /*rgb(var(--os-font-color))*/;
+          height: 0.1vh;
+          background-color: rgb(var(--os-font-color));
         }
-  
+
       }
-  
+
       &__items {
-  
+
         &__item {
-          padding: 0 2.5em 0 2.5em;
           margin-top: 2.5em;
           margin-bottom: 6.5em;
+
           display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+          }
+
           border-bottom: solid 0.2vh;
-  
+
           &__icon{
-            width: 45vh;
-            height: 70vh;
+            width: 40%;
+            height: 70%;
             align-items: center;
             padding-right: 4em;
-  
+            @media (max-width: 768px) {
+              padding-right: 0;
+              margin: auto;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
             &__image {
               width: 45vh;
               height: 60vh;
-              background-color: lightgrey;
-  
+
+              @media (max-width: 1200px) {
+                width: 40vh;
+                height: 55vh;
+              }
+
+              @media (max-width: 992px) {
+                width: 35vh;
+                height: 50vh;
+              }
+
+              @media (max-width: 768px) {
+                width: 30vh;
+                height: 45vh;
+              }
+
+              @media (max-width: 400px) {
+                width: 25vh;
+                height: 40vh;
+              }
+
             }
-  
+
             &__description {
               padding-top: 0.5em;
               text-align: center;
-  
+
               font-weight: bolder;
               font-size: 2rem;
+
+              @media (max-width: 1200px) {
+                font-size: 1.875rem;
+              }
+
+              @media (max-width: 992px) {
+                font-size: 1.75rem;
+              }
+
+              @media (max-width: 768px) {
+                font-size: 1.625rem;
+              }
+
+              @media (max-width: 400px) {
+                font-size: 1.5rem;
+              }
+
             }
-  
+
           }
-  
+
           &__description {
             align-self: auto;
             padding-top: 2em;
+            @media (max-width: 768px) {
+              padding-top: 1em;
+              text-align: center;
+            }
             font-weight: normal;
             font-size: 2.25rem;
+
+            @media (max-width: 1200px) {
+              font-size: 1.75rem;
+            }
+
+            @media (max-width: 992px) {
+              font-size: 1.625rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 1.5rem;
+            }
+
+            @media (max-width: 400px) {
+              font-size: 1.375rem;
+            }
           }
-  
+
         }
-  
+
       }
     }
   }
-  

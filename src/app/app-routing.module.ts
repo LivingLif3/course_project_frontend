@@ -43,6 +43,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'knowledgeBase/:id',
+    loadComponent: () =>
+      import('./core/knowledge-base/picture-page/picture-page.component').then(
+        (value) => value.PicturePageComponent
+      )
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'main',

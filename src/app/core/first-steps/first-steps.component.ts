@@ -1,9 +1,8 @@
-import { ThemeSwitcherService } from './../services/theme-switcher.service';
-import { ImageService } from './../services/image.service';
+import { ThemeSwitcherService } from '../services/theme-switcher.service';
+import { ImageService } from '../services/image.service';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RowInfoComponent } from './components/row-info/row-info.component';
-import { ThemeColorType } from '../types/ThemeColorType';
 
 @Component({
   selector: 'app-first-steps',

@@ -12,11 +12,10 @@
       <ng-container class="content-wrapper__main-content__items" *ngFor="let teammate of this.team">
         <div class="content-wrapper__main-content__items__item">
           <div class="content-wrapper__main-content__items__item__icon">
-            <!--<img class="content-wrapper__main-content__items__item__icon__image"
+            <img class="content-wrapper__main-content__items__item__icon__image"
                  alt="{{teammate.fullName}}"
-                 [src]="this.imageService.getImage(teammate.imgName!, 'png')"
-            />-->
-            <div class="content-wrapper__main-content__items__item__icon__image"></div>
+                 [src]="this.imageService.getImage(teammate.imgName!, 'jpg')"
+            />
             <div class="content-wrapper__main-content__items__item__icon__description">
               {{teammate.fullName}}
             </div>
@@ -27,6 +26,5 @@
         </div>
       </ng-container>
     </div>
-  
+
   </div>
-  

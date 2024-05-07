@@ -5,6 +5,7 @@ import { Tile } from '../types/Tile';
 import { MasonryOptions } from '../types/MasonryOptions';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { Router } from '@angular/router';
+import {ThemeSwitcherService} from "../services/theme-switcher.service";
 
 @Component({
   selector: 'app-knowledge-base',
@@ -19,7 +20,7 @@ export class KnowledgeBaseComponent implements OnInit {
     gutter: 5,
   };
 
-  private chosenFlags: Set<string> = new Set();
+  private chosenFlag: string | null = null;
 
   private readonly flags: string[] = ['Author', 'Style', 'Name'];
 
@@ -40,7 +41,7 @@ export class KnowledgeBaseComponent implements OnInit {
     {
       id: 2,
       imgUrl: '',
-      imgName: 'fork',
+      imgName: 'black',
     },
     {
       id: 3,
@@ -57,9 +58,33 @@ export class KnowledgeBaseComponent implements OnInit {
       imgUrl: '',
       imgName: 'night',
     },
+    {
+      id: 6,
+      imgUrl: '',
+      imgName: 'woman',
+    },
+    {
+      id: 6,
+      imgUrl: '',
+      imgName: 'war',
+    },
+    {
+      id: 7,
+      imgUrl: '',
+      imgName: 'mech',
+    },
+    {
+      id: 8,
+      imgUrl: '',
+      imgName: 'bog',
+    },
   ];
 
-  constructor(public imageService: ImageService, private router: Router) {}
+  constructor(
+    public imageService: ImageService,
+    private router: Router,
+    public themeSwitcherService: ThemeSwitcherService
+  ) { }
 
   ngOnInit(): void {}
 
@@ -74,16 +99,16 @@ export class KnowledgeBaseComponent implements OnInit {
     this.isShowingMenu = !this.isShowingMenu;
   }
 
-  public addFlag(tag: string): void {
-    this.chosenFlags.add(tag);
+  public setFlag(flag: string): void {
+    this.chosenFlag = flag;
   }
 
-  public eraseFlag(tag: string): void {
-    this.chosenFlags.delete(tag);
+  public eraseFlag(): void {
+    this.chosenFlag = null;
   }
 
-  public getChosenFlags(): Set<string> {
-    return this.chosenFlags;
+  public getFlag(): any {
+    return this.chosenFlag;
   }
 
   public getFlags(): string[] {
@@ -92,5 +117,15 @@ export class KnowledgeBaseComponent implements OnInit {
 
   public getTiles(): Tile[] {
     return this.tiles;
+  }
+
+  public getImage(name: string, theme: string) {
+    return (theme === 'light')
+      ? this.imageService.getImage(name, 'png')
+      : this.imageService.getImage(name + 'Dark', 'png')
+  }
+
+  get theme$() {
+    return this.themeSwitcherService.theme$;
   }
 }
