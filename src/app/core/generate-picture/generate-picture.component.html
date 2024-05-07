@@ -4,8 +4,9 @@
         <div class="gen-picture-wrapper__header__sub-title">To generate a picture write the description of your picture below, then click the button <i>“Generate”</i>. Wait for several seconds and voila your picture has been generated.</div>
     </div>
     <div class="gen-picture-wrapper__content">
-        <div class="gen-picture-wrapper__content__textarea">
+        <div class="gen-picture-wrapper__content__textarea" *ngIf="{ theme: theme$ | async } as Theme">
             <textarea placeholder="write the description"></textarea>
+            <img [src]="getImage(Theme.theme!)" class="gen-picture-wrapper__content__textarea__micro">
         </div>
         <button class="gen-picture-wrapper__content__button">GENERATE</button>
     </div>
