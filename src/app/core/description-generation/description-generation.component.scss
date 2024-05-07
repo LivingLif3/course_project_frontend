@@ -1,0 +1,61 @@
+.content-wrapper {
+  padding-top: 10em;
+  width: 100%;
+  justify-content: center;
+
+  .header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    .title {
+      font-weight: bold;
+      font-size: 4em;
+    }
+
+    .description {
+      width: 100%;
+      font-size: 1.5em;
+      padding-top: 4em;
+    }
+  }
+
+  .upload-wrapper {
+    padding-top: 6em;
+    display: flex;
+    justify-content: center;
+
+    .upload {
+      display: flex;
+      justify-content: center;
+
+      &__upload-file {
+        width: 80%;
+        cursor: pointer;
+
+      }
+    }
+  }
+}
+
+
+.arrow-button {
+  z-index: 998;
+  top: 10rem;
+  left: 5rem;
+
+  @media (max-width: 998px) {
+    top: 10rem;
+    left: 3rem;
+
+    transform: scale(0.8);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+  position: absolute;
+}
