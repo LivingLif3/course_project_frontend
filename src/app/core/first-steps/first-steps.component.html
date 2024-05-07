@@ -1,62 +1,63 @@
 <div class="first-steps-wrapper">
-    <div class="first-steps-wrapper__header-wrapper">
-        <div class="first-steps-wrapper__header-wrapper__header">
-            FIRST STEPS
-        </div>
+  <div class="first-steps-wrapper__header-wrapper">
+    <div class="first-steps-wrapper__header-wrapper__header">
+      FIRST STEPS
     </div>
-    <div class="first-steps-wrapper__content-wrapper" *ngIf="{ theme: theme$ | async } as Theme">
-        <div class="row-info" [class.invert]="false">
-            <div class="row-info__text">
-                Find the things you are interested in
-                <img [src]="getArrow('left', Theme.theme!)" class="fill" [class.left]="true">
-            </div>
-            <div class="row-info__photo">
-                <img [src]="getImage('fox')" class="fox" />
-            </div>
-        </div>
-        <div class="row-info" [class.invert]="true">
-            <div class="row-info__text">
-                Filter the information by different tags
-                <img [src]="getArrow('right', Theme.theme!)" class="fill" [class.right]="true">
-            </div>
-            <div class="row-info__photo">
-                <img [src]="getImage('dinner')" class="dinner" />
-            </div>
-        </div>
-        <div class="row-info" [class.invert]="false">
-            <div class="row-info__text">
-                Discover new things
-                <img [src]="getArrow('left', Theme.theme!)" class="fill" [class.left]="true">
-            </div>
-            <div class="row-info__photo">
-                <img [src]="getImage('god')" class="god" />
-            </div>
-        </div>
-        <div class="row-info" [class.invert]="true">
-            <div class="row-info__text">
-                Generate new images
-                <img [src]="getArrow('right', Theme.theme!)" class="fill" [class.right]="true">
-            </div>
-            <div class="row-info__photo">
-                <img [src]="getImage('adam')" class="adam" />
-            </div>
-        </div>
-        <div class="row-info" [class.invert]="false">
-            <div class="row-info__text">
-                Make conclusions of your work
-            </div>
-            <div class="row-info__photo">
-                <img [src]="getImage('angels')" class="angels" />
-            </div>
-        </div>
-        <!-- <ng-container *ngFor="let row of informationRows">
-            <app-row-info
-                [info]="row['info']"
-                [additionalImage]="row['additionalImage']"
-                [invert]="row['position'] === 'right'"
-                class="first-steps-wrapper__content-wrapper__row"
-                [arrow]="getArrow(row['position'])"
-            ></app-row-info>
-        </ng-container> -->
+  </div>
+  <div class="first-steps-wrapper__content-wrapper" *ngIf="{ theme: theme$ | async } as Theme">
+    <div class="row-info" [class.invert]="false">
+      <div class="row-info__text">
+        Find the things you are interested in
+        <img [src]="getArrow('left', Theme.theme!)" class="fill" [class.left]="true">
+      </div>
+      <div class="row-info__photo">
+        <img [src]="getImage('fox')" class="fox"/>
+        <img [src]="getImage('screen1')" class="screen">
+      </div>
     </div>
+    <div class="row-info" [class.invert]="true">
+      <div class="row-info__text">
+        Filter the information by different tags
+        <img [src]="getArrow('right', Theme.theme!)" class="fill" [class.right]="true">
+      </div>
+      <div class="row-info__photo">
+        <img [src]="getImage('dinner')" class="dinner"/>
+      </div>
+    </div>
+    <div class="row-info" [class.invert]="false">
+      <div class="row-info__text">
+        Discover new things
+        <img [src]="getArrow('left', Theme.theme!)" class="fill" [class.left]="true">
+      </div>
+      <div class="row-info__photo">
+        <img [src]="getImage('god')" class="god"/>
+      </div>
+    </div>
+    <div class="row-info" [class.invert]="true">
+      <div class="row-info__text">
+        Generate new images
+        <img [src]="getArrow('right', Theme.theme!)" class="fill" [class.right]="true">
+      </div>
+      <div class="row-info__photo">
+        <img [src]="getImage('adam')" class="adam"/>
+      </div>
+    </div>
+    <div class="row-info" [class.invert]="false">
+      <div class="row-info__text">
+        Make conclusions of your work
+      </div>
+      <div class="row-info__photo">
+        <img [src]="getImage('angels')" class="angels"/>
+      </div>
+    </div>
+    <!-- <ng-container *ngFor="let row of informationRows">
+        <app-row-info
+            [info]="row['info']"
+            [additionalImage]="row['additionalImage']"
+            [invert]="row['position'] === 'right'"
+            class="first-steps-wrapper__content-wrapper__row"
+            [arrow]="getArrow(row['position'])"
+        ></app-row-info>
+    </ng-container> -->
+  </div>
 </div>

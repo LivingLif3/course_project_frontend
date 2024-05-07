@@ -43,23 +43,23 @@
         display: flex;
         flex: 1;
         color: rgb(var(--os-font-color));
-        font-size: 2.5rem;
+        font-size: 2rem;
 
         @media (max-width: 1200px) {
-          font-size: 2.25rem;
-        }
-
-        @media (max-width: 998px) {
           font-size: 2rem;
         }
 
+        @media (max-width: 998px) {
+          font-size: 1.75rem;
+        }
+
         @media (max-width: 768px) {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           padding-bottom: 10em;
         }
 
         @media (max-width: 400px) {
-          font-size: 1rem;
+          font-size: 0.75rem;
         }
 
         text-align: center;
@@ -94,12 +94,17 @@
 
           transform: scale(0.7);
         }
+
+        .screen {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &__photo {
         display: flex;
         flex: 1;
-        background-color: #D9D9D9;
         position: relative;
 
         min-height: 354px;
@@ -109,7 +114,7 @@
           transform: scale(0.7);
 
           @media (max-width: 1200px) {
-            transform: scale(0.5);
+            transform: scale(0.6);
           }
 
         }
@@ -129,12 +134,14 @@
           }
 
           @media (max-width: 768px) {
-            top:-57%;
-            left: 10%;
+            top:-60%;
+            left: 50%;
           }
 
           @media (max-width: 400px) {
             transform: scale(0.4);
+            top:-56%;
+            left: 25%;
           }
         }
 
@@ -143,36 +150,107 @@
           left: -15%;
 
           @media (max-width: 1200px) {
-            top:-70%;
-            right: 10%;
+            top:-73%;
+            left: -20%;
           }
 
           @media (max-width: 998px) {
-            top:-58%;
-            right: 10%;
+            transform: scale(0.5);
+            top:-69%;
+            left: -37%;
           }
 
           @media (max-width: 768px) {
-            top:-57%;
-            left: 10%;
+            top:-69%;
+            left: -25%;
           }
 
           @media (max-width: 400px) {
-            transform: scale(0.4);
+            transform: scale(0.3);
+            top: -60%;
+            left: -90%;
           }
         }
 
         .god {
-          top: -100%
+          top: -100%;
+
+          @media (max-width: 1200px) {
+            top:-100%;
+            left: -20%;
+          }
+
+          @media (max-width: 998px) {
+            top:-100%;
+            left: -40%;
+          }
+
+          @media (max-width: 768px) {
+            transform: scale(0.4);
+            top:-90%;
+            left: 0;
+          }
+
+          @media (max-width: 400px) {
+            transform: scale(0.3);
+            top:-85%;
+            left: -85%;
+          }
         }
 
         .adam {
           top: -110%;
           left: -20%;
+
+          @media (max-width: 1200px) {
+            top:-105%;
+            left: -20%;
+          }
+
+          @media (max-width: 998px) {
+            transform: scale(0.6);
+            top:-105%;
+            left: -50%;
+          }
+
+          @media (max-width: 768px) {
+            transform: scale(0.4);
+            top:-98%;
+            left: -48%;
+          }
+
+          @media (max-width: 400px) {
+            transform: scale(0.3);
+            top:-94%;
+            left: -100%;
+          }
         }
 
         .angels {
           top: -45%;
+
+          @media (max-width: 1200px) {
+            top:-42.5%;
+            left: -10%;
+          }
+
+          @media (max-width: 998px) {
+            transform: scale(0.6);
+            top:-42.5%;
+            left: -25%;
+          }
+
+          @media (max-width: 768px) {
+            transform: scale(0.4);
+            top:-37%;
+            left: -30%;
+          }
+
+          @media (max-width: 400px) {
+            transform: scale(0.3);
+            top:-34.5%;
+            left: -75%;
+          }
         }
 
       }
