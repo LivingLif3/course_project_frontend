@@ -3,11 +3,12 @@ import { ImageService } from '../services/image.service';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RowInfoComponent } from './components/row-info/row-info.component';
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-first-steps',
   standalone: true,
-  imports: [CommonModule, RowInfoComponent],
+  imports: [CommonModule, RowInfoComponent, RouterLink],
   templateUrl: './first-steps.component.html',
   styleUrls: ['./first-steps.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -48,7 +49,8 @@ export class FirstStepsComponent {
 
   constructor(
     private imageService: ImageService,
-    private themeSwitcherService: ThemeSwitcherService
+    private themeSwitcherService: ThemeSwitcherService,
+    private router: Router
   ) {}
 
   getArrow(position: string, theme: string) {
@@ -69,5 +71,9 @@ export class FirstStepsComponent {
 
   get theme$() {
     return this.themeSwitcherService.theme$;
+  }
+
+  public onClick() {
+    let nav = this.router.navigate(['knowledgeBase'])
   }
 }

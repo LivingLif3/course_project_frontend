@@ -55,6 +55,7 @@
           background-color: #ffffff;
 
           &__search {
+            cursor: pointer;
             width: 3vh;
             height: 3vh;
             padding-right: 0.5em;
@@ -74,6 +75,7 @@
       flex-direction: column;
 
       &__button {
+        cursor: pointer;
         border: none;
         background-color: rgb(var(--os-background-color));
 
@@ -100,6 +102,7 @@
         flex-direction: column;
 
         &__flag {
+          cursor: pointer;
           text-align: left;
           font-size: 1.2rem;
 
@@ -140,6 +143,7 @@
       }
 
       &__cross {
+        cursor: pointer;
         margin-left: 0.5em;
 
         width: 0.5em;
@@ -182,6 +186,7 @@
       }
 
       &__item {
+        cursor: pointer;
         width: 20%;
 
         @media (max-width: 1200px) {

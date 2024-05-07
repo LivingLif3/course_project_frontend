@@ -10,23 +10,18 @@
     height: 4.1rem;
 
     @media (max-width: 1200px) {
-      width: 3.2rem;
-      height: 3.2rem;
-    }
-
-    @media (max-width: 992px) {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    @media (max-width: 768px) {
       width: 2.5rem;
       height: 2.5rem;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 992px) {
       width: 2rem;
       height: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
@@ -37,19 +32,15 @@
     margin-right: 10px;
 
     @media (max-width: 1200px) {
-      font-size: 3.2rem;
+      font-size: 2.5rem;
     }
 
     @media (max-width: 992px) {
-      font-size: 2.6em;
+      font-size: 2em;
     }
 
     @media (max-width: 768px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 400px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 }

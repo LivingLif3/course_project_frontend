@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeSwitcherComponent } from './core/components/theme-switcher/theme-switcher.component';
 import { HeaderAnimationDirective } from './core/directives/header-animation.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { DescriptionGenerationComponent } from './core/description-generation/description-generation.component';
 
 @NgModule({
   declarations: [

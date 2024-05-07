@@ -22,6 +22,7 @@
       </div>
       <div class="row-info__photo">
         <img [src]="getImage('dinner')" class="dinner"/>
+        <img [src]="getImage('screen2')" class="screen">
       </div>
     </div>
     <div class="row-info" [class.invert]="false">
@@ -31,6 +32,7 @@
       </div>
       <div class="row-info__photo">
         <img [src]="getImage('god')" class="god"/>
+        <img [src]="getImage('screen3')" class="screen">
       </div>
     </div>
     <div class="row-info" [class.invert]="true">
@@ -40,6 +42,7 @@
       </div>
       <div class="row-info__photo">
         <img [src]="getImage('adam')" class="adam"/>
+        <img [src]="getImage('screen4')" class="screen">
       </div>
     </div>
     <div class="row-info" [class.invert]="false">
@@ -48,7 +51,15 @@
       </div>
       <div class="row-info__photo">
         <img [src]="getImage('angels')" class="angels"/>
+        <img [src]="getImage('screen5')" class="screen">
       </div>
+    </div>
+
+
+    <div class="button-wrapper">
+      <button class="button-router" routerLink="/knowledgeBase">
+        START YOUR TRIP
+      </button>
     </div>
     <!-- <ng-container *ngFor="let row of informationRows">
         <app-row-info
@@ -60,4 +71,5 @@
         ></app-row-info>
     </ng-container> -->
   </div>
+
 </div>

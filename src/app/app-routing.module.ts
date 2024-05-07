@@ -50,6 +50,13 @@ const routes: Routes = [
       )
   },
   {
+    path: 'descriptionGeneration',
+    loadComponent: () =>
+      import('./core/description-generation/description-generation.component').then(
+        (value) => value.DescriptionGenerationComponent
+      )
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'main',
